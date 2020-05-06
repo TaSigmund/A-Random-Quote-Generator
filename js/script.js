@@ -9,6 +9,9 @@ project 1 - A Random Quote Generator
 
 /*** 
  * `quotes` array 
+ * All quotations from:
+ * Ratcliffe, S. (2017). Oxford Essential Quotations. Retrieved May 5 and May 6, 2020, 
+ * from https://www.oxfordreference.com/view/10.1093/acref/9780191843730.001.0001/acref-9780191843730?rskey=oDaKHJ&result=1
 ***/
 
 let quotes = [
@@ -52,27 +55,28 @@ let quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function -> Creates a random number between 0 and lenght of the array - 1. 
+ * This number is used as an index value to return a random quote.
 ***/
 
 function getRandomQuote() {
-  let randomNumber = Math.floor(Math.random() * ((quotes.length -1) - Math.ceil(0) + 1)) + Math.ceil(0); // random number between 0 and lenght of the array - 1. Based on a code snippet on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-  return quotes[randomNumber]
+  //  function below is based on a code snippet on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+  let randomNumber = Math.floor(Math.random() * ((quotes.length -1) - Math.ceil(0) + 1)) + Math.ceil(0); 
+  return quotes[randomNumber];
 }
 
 
 /***
- * `printQuote` function
+ * `printQuote` function -> Creates an HTML string containing a random quote and prints it to the page.
 ***/
 const printQuote = function () {
   let randomQuote = getRandomQuote();
   let quoteHTML = ``;
   quoteHTML += `<p class="quote"> ${randomQuote.quote} </p> <p class="source"> ${randomQuote.source}`;
-  if (randomQuote.citation) {quoteHTML += `<span class="citation"> ${randomQuote.citation} </span>`}
-  if (randomQuote.year) {quoteHTML += `<span class="year"> ${randomQuote.year} </span>`}
+    if (randomQuote.citation) {quoteHTML += `<span class="citation"> ${randomQuote.citation} </span>`}
+    if (randomQuote.year) {quoteHTML += `<span class="year"> ${randomQuote.year} </span>`}
   quoteHTML += `</p>`;
   document.getElementById('quote-box').innerHTML = quoteHTML; 
-  return quoteHTML;
 }
 
 
