@@ -80,8 +80,12 @@ const printQuote = function () {
 
 /***
  * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+/***
+ * timing function to print a new quote automatically every 10 seconds.
+***/
+setInterval(function(){ printQuote() }, 10000); //based on a code snippet on: https://www.w3schools.com/jsref/met_win_setinterval.asp
 
