@@ -3,10 +3,6 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
 /*** 
  * `quotes` array 
  * All quotations from:
@@ -60,14 +56,14 @@ let quotes = [
 ***/
 
 function getRandomQuote() {
-  //  function below is based on a code snippet on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-  let randomNumber = Math.floor(Math.random() * ((quotes.length -1) - Math.ceil(0) + 1)) + Math.ceil(0); 
+  let randomNumber = Math.floor(Math.random() * ((quotes.length -1) - Math.ceil(0) + 1)) + Math.ceil(0); //based on a code snippet on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   return quotes[randomNumber];
 }
 
 
 /***
  * `printQuote` function -> Creates an HTML string containing a random quote and prints it to the page.
+ * Also changes the background color every time a new random quote gets displayed.
 ***/
 const printQuote = function () {
   let randomQuote = getRandomQuote();
@@ -77,9 +73,9 @@ const printQuote = function () {
     if (randomQuote.year) {quoteHTML += `<span class="year"> ${randomQuote.year} </span>`}
   quoteHTML += `</p>`;
   document.getElementById('quote-box').innerHTML = quoteHTML; 
+  const randomColor = Math.floor(Math.random()*16777215).toString(16); //based on a code snippet on: 
+  document.body.style.backgroundColor = "#" + randomColor; // https://css-tricks.com/snippets/javascript/random-hex-color/
 }
-
-
 
 
 /***
