@@ -46,6 +46,29 @@ let quotes = [
       source: 'Malala Yousafzai',
       citation: 'United Nations General Assembly',
       year: 2013
+  },
+  {
+    quote: 'We haven\'t got the money, so we\'ve got to think!',
+    source: 'Ernest Rutherford',
+    citation: 'Bulletin of the Institute of Physics vol. 13',
+    year: 1962
+  },
+  {
+    quote: 'Some problems are so complex that you have to be highly intelligent and well informed just to be undecided about them.',
+    source: 'Laurence J. Peter',
+    citation: ' Peter\'s Almanac',
+    year: 1982
+  },  {
+    quote: 'One never notices what has been done; one can only see what remains to be done.',
+    source: 'Marie Curie',
+    citation: 'letter to her brother',
+    year: 1894
+  },
+  {
+    quote: 'For it is not enough to have a good mind; the main thing is to use it well.',
+    source: 'René Descartes',
+    citation: 'Le Discours de la méthode pt. 1',
+    year: 1637
   }
 ]
 
