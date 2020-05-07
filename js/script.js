@@ -118,7 +118,7 @@ const printQuote = function () {
   quoteHTML += `</p>`;
   document.getElementById('quote-box').innerHTML = quoteHTML; 
   const randomColor = Math.floor(Math.random()*16777215).toString(16); //based on a code snippet on: 
-  document.body.style.backgroundColor = "#" + randomColor; // https://css-tricks.com/snippets/javascript/random-hex-color/
+  document.body.style.backgroundColor = "#" + randomColor; // https://css-tricks.com/snippets/javascript/random-hex-color/ Creates a random background color using the basis 16 and the dezimal color code for white. 
 }
 
 printQuote(); // sets the initial quote to a random quote with a random background color
@@ -135,5 +135,5 @@ document.getElementById('load-quote').addEventListener("click", printQuote, fals
  * timing function to print a new quote automatically every 10 seconds.
 ***/
 
-setInterval(function(){ printQuote() }, 10000); //based on a code snippet on: https://www.w3schools.com/jsref/met_win_setinterval.asp
+setInterval(function(){ printQuote() }, 10000); //based on a code snippet on: https://www.w3schools.com/jsref/met_win_setinterval.asp Automatically calls printQuote() every ten seconds.
 
