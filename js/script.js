@@ -97,7 +97,7 @@ let quotes = [
 ***/
 
 function getRandomQuote() {
-  let randomNumber = Math.floor(Math.random() * ((quotes.length -1) - Math.ceil(0) + 1)) + Math.ceil(0); //based on a code snippet on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+  let randomNumber = Math.floor(Math.random() * Math.floor(quotes.length)); //based on a code snippet on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   return quotes[randomNumber];
 }
 
